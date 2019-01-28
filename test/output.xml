@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181219 10:20:39.633" generator="Robot 3.0.4 (Python 2.7.10 on darwin)">
+<suite source="/Users/ganiyanpauji/Documents/Automation Android/B2BStaging/test/cart_addNewOrder_test.robot" id="s1" name="cart addNewOrder test">
+<test id="s1-t1" name="Test Cart">
+<kw type="setup" name="Open App" library="resources">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${REMOTE_URL}</arg>
+<arg>javascriptEnabled=${JAVASCRIPT_ENABLE}</arg>
+<arg>browserName=${BROWSER_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=/Users/ganiyanpauji/Documents/Automation Android/B2BStaging${APP}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:20:49.245" starttime="20181219 10:20:40.128"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:20:49.245" starttime="20181219 10:20:40.127"></status>
+</kw>
+<kw name="Open Cart Pages">
+<arguments>
+<arg>${order_id}</arg>
+</arguments>
+<kw name="GIVEN Open Cart Page">
+<kw name="Landing Pages" library="landing_pages">
+<kw name="Landing Page Opened" library="landing_pages">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20181219 10:20:54.250" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20181219 10:20:54.250" starttime="20181219 10:20:49.247"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_LANJUT}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:20:54.301" starttime="20181219 10:20:54.251"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:20:54.301" starttime="20181219 10:20:49.247"></status>
+</kw>
+<kw name="Click Button Lanjut" library="landing_pages">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BUTTON_LANJUT}</arg>
+</arguments>
+<msg timestamp="20181219 10:20:54.305" level="INFO">Clicking element 'id.b2b.android.staging:id/btn_lanjut'.</msg>
+<status status="PASS" endtime="20181219 10:20:54.684" starttime="20181219 10:20:54.302"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:20:54.684" starttime="20181219 10:20:54.301"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:20:54.684" starttime="20181219 10:20:49.246"></status>
+</kw>
+<kw name="Login Success" library="login_pages">
+<kw name="Open To Login Page" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${INPUT_EMAIL}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:20:55.328" starttime="20181219 10:20:54.686"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${INPUT_PASSWORD}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:20:55.383" starttime="20181219 10:20:55.329"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:20:55.424" starttime="20181219 10:20:55.384"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:20:55.424" starttime="20181219 10:20:54.685"></status>
+</kw>
+<kw name="Input Email" library="login_pages">
+<arguments>
+<arg>cucy@getnada.com</arg>
+</arguments>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT_EMAIL}</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20181219 10:20:55.428" level="INFO">Typing text 'cucy@getnada.com' into text field 'id.b2b.android.staging:id/tie_email'</msg>
+<status status="PASS" endtime="20181219 10:21:00.810" starttime="20181219 10:20:55.425"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:00.810" starttime="20181219 10:20:55.425"></status>
+</kw>
+<kw name="Input Pass" library="login_pages">
+<arguments>
+<arg>salim12345</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:00.817" level="INFO">Clicking element 'id.b2b.android.staging:id/tie_password'.</msg>
+<status status="PASS" endtime="20181219 10:21:01.484" starttime="20181219 10:21:00.812"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT_PASSWORD}</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:01.488" level="INFO">Typing text 'salim12345' into text field 'id.b2b.android.staging:id/tie_password'</msg>
+<status status="PASS" endtime="20181219 10:21:07.769" starttime="20181219 10:21:01.485"></status>
+</kw>
+<kw name="Hide Keyboard" library="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press</doc>
+<status status="PASS" endtime="20181219 10:21:09.442" starttime="20181219 10:21:07.770"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:09.442" starttime="20181219 10:21:00.811"></status>
+</kw>
+<kw name="Click Button Login" library="login_pages">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BUTTON_LOGIN}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:09.446" level="INFO">Clicking element 'id.b2b.android.staging:id/btn_login'.</msg>
+<status status="PASS" endtime="20181219 10:21:10.035" starttime="20181219 10:21:09.443"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:10.036" starttime="20181219 10:21:09.443"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:10.036" starttime="20181219 10:20:54.685"></status>
+</kw>
+<kw name="Home Page Displayed" library="home_pages">
+<kw name="Home Page Opened" library="home_pages">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20181219 10:21:14.044" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20181219 10:21:14.044" starttime="20181219 10:21:10.041"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${ICON_SEARCH}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:14.329" starttime="20181219 10:21:14.045"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${TAB_JELAJAH}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:14.571" starttime="20181219 10:21:14.329"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${TAB_KATEGORI}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:14.749" starttime="20181219 10:21:14.571"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${TAB_BRAND}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:15.013" starttime="20181219 10:21:14.749"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:15.014" starttime="20181219 10:21:10.039"></status>
+</kw>
+<kw name="Click Icon Search" library="home_pages">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ICON_SEARCH}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:15.019" level="INFO">Clicking element 'id.b2b.android.staging:id/menu_search'.</msg>
+<status status="PASS" endtime="20181219 10:21:15.297" starttime="20181219 10:21:15.014"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:15.297" starttime="20181219 10:21:15.014"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:15.297" starttime="20181219 10:21:10.037"></status>
+</kw>
+<kw name="Search Page" library="search_pages">
+<kw name="Input Search Data" library="search_pages">
+<arguments>
+<arg>3320457732</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:15.304" level="INFO">Clicking element 'id.b2b.android.staging:id/search_src_text'.</msg>
+<status status="PASS" endtime="20181219 10:21:19.436" starttime="20181219 10:21:15.299"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${DATA_PRODUCT}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:19.442" level="INFO">Typing text '3320457732' into text field 'id.b2b.android.staging:id/search_src_text'</msg>
+<status status="PASS" endtime="20181219 10:21:24.588" starttime="20181219 10:21:19.438"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:24.591" starttime="20181219 10:21:15.298"></status>
+</kw>
+<kw name="Click List Product Search" library="search_pages">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${PRODUCT_LIST}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:26.031" starttime="20181219 10:21:24.593"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${PRODUCT_LIST}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:26.034" level="INFO">Clicking element 'id.b2b.android.staging:id/tv_query'.</msg>
+<status status="PASS" endtime="20181219 10:21:26.329" starttime="20181219 10:21:26.031"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:26.330" starttime="20181219 10:21:24.592"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:26.331" starttime="20181219 10:21:15.297"></status>
+</kw>
+<kw name="Open Detail Page" library="detail_pages">
+<kw name="Detail Page Opened" library="detail_pages">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20181219 10:21:31.335" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20181219 10:21:31.335" starttime="20181219 10:21:26.333"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_BELI}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:31.378" starttime="20181219 10:21:31.336"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:31.378" starttime="20181219 10:21:26.332"></status>
+</kw>
+<kw name="Click Button Beli" library="detail_pages">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BUTTON_BELI}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:31.383" level="INFO">Clicking element 'id.b2b.android.staging:id/btn_order'.</msg>
+<status status="PASS" endtime="20181219 10:21:31.609" starttime="20181219 10:21:31.379"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:31.611" starttime="20181219 10:21:31.378"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:31.612" starttime="20181219 10:21:26.331"></status>
+</kw>
+<kw name="Click Last Modified List" library="addToCart_pages">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LASTMODIFIED_LIST}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:31.621" level="INFO">Clicking element 'id.b2b.android.staging:id/tv_opty_id'.</msg>
+<status status="PASS" endtime="20181219 10:21:34.182" starttime="20181219 10:21:31.616"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:34.182" starttime="20181219 10:21:31.613"></status>
+</kw>
+<kw name="List New Order Opened" library="pilih_order_pages">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${ICON_NEWORDER}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:35.823" starttime="20181219 10:21:34.183"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${CLICK_BY_ORDERID}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:36.103" starttime="20181219 10:21:35.824"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:36.103" starttime="20181219 10:21:34.182"></status>
+</kw>
+<kw name="Click New Order" library="pilih_order_pages">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ICON_NEWORDER}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:36.109" level="INFO">Clicking element 'id.b2b.android.staging:id/menu_new_opty'.</msg>
+<status status="PASS" endtime="20181219 10:21:36.663" starttime="20181219 10:21:36.104"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:36.664" starttime="20181219 10:21:36.103"></status>
+</kw>
+<kw name="Create New Order List Flow" library="newOrderAddToCart_pages">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${TEXT_NEWORDER}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:37.180" starttime="20181219 10:21:36.665"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${TEXT_NEWORDER}</arg>
+<arg>Sudahlah</arg>
+</arguments>
+<msg timestamp="20181219 10:21:37.184" level="INFO">Typing text 'Sudahlah' into text field 'id.b2b.android.staging:id/et_input'</msg>
+<status status="PASS" endtime="20181219 10:21:42.592" starttime="20181219 10:21:37.181"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_BUAT}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:43.383" starttime="20181219 10:21:42.593"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BUTTON_BUAT}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:43.388" level="INFO">Clicking element 'id.b2b.android.staging:id/btn_yes'.</msg>
+<status status="PASS" endtime="20181219 10:21:44.016" starttime="20181219 10:21:43.384"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:44.017" starttime="20181219 10:21:36.664"></status>
+</kw>
+<kw name="Click Get Text From Order ID" library="pilih_order_pages">
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${CLICK_BY_ORDERID}</arg>
+</arguments>
+<assign>
+<var>${Order_id}</var>
+</assign>
+<msg timestamp="20181219 10:21:46.579" level="INFO">Element 'id.b2b.android.staging:id/tv_opty_header' text is '#O180000187・19 Dec 2018' </msg>
+<msg timestamp="20181219 10:21:46.581" level="INFO">${Order_id} = #O180000187・19 Dec 2018</msg>
+<status status="PASS" endtime="20181219 10:21:46.581" starttime="20181219 10:21:44.018"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Order_id}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:46.582" level="INFO">${Order_id} = #O180000187・19 Dec 2018</msg>
+<status status="PASS" endtime="20181219 10:21:46.582" starttime="20181219 10:21:46.581"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${CLICK_BY_ORDERID}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:46.585" level="INFO">Clicking element 'id.b2b.android.staging:id/tv_opty_header'.</msg>
+<status status="PASS" endtime="20181219 10:21:47.199" starttime="20181219 10:21:46.582"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:47.200" starttime="20181219 10:21:44.017"></status>
+</kw>
+<kw name="Add To Cart Flow" library="addToCart_pages">
+<kw name="Add To Cart Opened" library="addToCart_pages">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${LASTMODIFIED_LIST}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:47.833" starttime="20181219 10:21:47.201"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${TAMBAHKAN_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:47.873" starttime="20181219 10:21:47.834"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:47.874" starttime="20181219 10:21:47.201"></status>
+</kw>
+<kw name="Click Button Tambahkan" library="addToCart_pages">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TAMBAHKAN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:47.878" level="INFO">Clicking element 'id.b2b.android.staging:id/btn_product_add_confirm'.</msg>
+<status status="PASS" endtime="20181219 10:21:48.499" starttime="20181219 10:21:47.875"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:48.499" starttime="20181219 10:21:47.874"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:48.500" starttime="20181219 10:21:47.200"></status>
+</kw>
+<kw name="Click Button Back From Detail Page" library="detail_pages">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_BACK_DETAIL}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:50.633" starttime="20181219 10:21:48.501"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BUTTON_BACK_DETAIL}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:50.641" level="INFO">Clicking element '//android.widget.ImageButton[contains(@clickable,true)]'.</msg>
+<status status="PASS" endtime="20181219 10:21:51.611" starttime="20181219 10:21:50.633"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:51.612" starttime="20181219 10:21:48.500"></status>
+</kw>
+<kw name="Click Button Back From Search Page" library="search_pages">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_BACK_SEARCH}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:53.030" starttime="20181219 10:21:51.615"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BUTTON_BACK_SEARCH}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:53.033" level="INFO">Clicking element '//android.widget.ImageButton[contains(@clickable,true)]'.</msg>
+<status status="PASS" endtime="20181219 10:21:53.405" starttime="20181219 10:21:53.030"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:53.405" starttime="20181219 10:21:51.613"></status>
+</kw>
+<kw name="Click Menu Cart" library="home_pages">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${MENU_CART}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:54.956" starttime="20181219 10:21:53.406"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MENU_CART}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:54.960" level="INFO">Clicking element 'id.b2b.android.staging:id/menu_order'.</msg>
+<status status="PASS" endtime="20181219 10:21:55.175" starttime="20181219 10:21:54.957"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:55.175" starttime="20181219 10:21:53.405"></status>
+</kw>
+<kw name="Cart Page Opened" library="cart_pages">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_DRAFT}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:57.938" starttime="20181219 10:21:55.176"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_NEGOTIATION}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:58.192" starttime="20181219 10:21:57.938"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_APPROVAL}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:58.431" starttime="20181219 10:21:58.192"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_FULFILLMENT}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:58.595" starttime="20181219 10:21:58.431"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_DONE}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:58.749" starttime="20181219 10:21:58.596"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${BUTTON_TERMINATED}</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:21:59.058" starttime="20181219 10:21:58.749"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:59.058" starttime="20181219 10:21:55.175"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:59.058" starttime="20181219 10:20:49.246"></status>
+</kw>
+<kw name="WHEN Click Button Draft">
+<kw name="Click Draft" library="cart_pages">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BUTTON_DRAFT}</arg>
+</arguments>
+<msg timestamp="20181219 10:21:59.063" level="INFO">Clicking element '//android.widget.Button[@text='Draft']'.</msg>
+<status status="PASS" endtime="20181219 10:21:59.483" starttime="20181219 10:21:59.059"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:59.484" starttime="20181219 10:21:59.059"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:21:59.484" starttime="20181219 10:21:59.058"></status>
+</kw>
+<kw name="THEN List Product Price Will Be Displayed">
+<arguments>
+<arg>${order_id}</arg>
+</arguments>
+<kw name="Draft Page From Cart Opened" library="cart_draft_pages">
+<arguments>
+<arg>${order_id}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//android.widget.TextView[@text='${Test}']</arg>
+</arguments>
+<status status="PASS" endtime="20181219 10:22:01.788" starttime="20181219 10:21:59.491"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//android.widget.TextView[@text='${Test}']</arg>
+</arguments>
+<msg timestamp="20181219 10:22:01.793" level="INFO">Clicking element '//android.widget.TextView[@text='#O180000187・19 Dec 2018']'.</msg>
+<status status="PASS" endtime="20181219 10:22:02.190" starttime="20181219 10:22:01.788"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:22:02.191" starttime="20181219 10:21:59.490"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:22:02.191" starttime="20181219 10:21:59.486"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:22:02.191" starttime="20181219 10:20:49.245"></status>
+</kw>
+<status status="PASS" endtime="20181219 10:22:02.191" critical="yes" starttime="20181219 10:20:40.127"></status>
+</test>
+<status status="PASS" endtime="20181219 10:22:02.195" starttime="20181219 10:20:39.638"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="cart addNewOrder test" pass="1">cart addNewOrder test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
